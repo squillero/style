@@ -16,7 +16,7 @@
 
 * Use `assert` to check the internal consistency and verify the correct usage of methods, not to check for the occurrence of unexpected events. That is: The optimized bytecode should not waste time verifying the correct invocation of methods or running sanity checks.
 
-* Multiple statements should generally be on their own separate lines. However, a statement on the same line of an `if` could improve readability if the resulting code is very simple (`if value is None: return True`).
+* Complex compound statements (i.e., multiple statements on the same line) should be avoided. However, a second statement on the same line of a simple `if` can sometimes improve readability (`if value is None: return True`).
 
 * Annotate all functions (refer to [PEP-483](https://www.python.org/dev/peps/pep-0483/) and [PEP-484](https://www.python.org/dev/peps/pep-0484/) for details).
 
