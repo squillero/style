@@ -1,8 +1,8 @@
 # Python
 
-## Coding Style
-
 > **Notez Bien**: All these rules are meant to be broken, **BUT** you need a very good reason **AND** you must explain it in a comment.
+
+## Style
 
 * Names (TL;DR): `module_name`, `package_name`, `ClassName`, `method_name`, `ExceptionName`, `function_name`, `GLOBAL_CONSTANT_NAME`, `global_var_name`, `instance_var_name`, `function_parameter_name`, `local_var_name`.
 
@@ -30,7 +30,7 @@
 
 * Follow the [Google's style guide](https://google.github.io/styleguide/pyguide.html) whenever in doubt. 
 
-## Abstract Classes
+## Conventions
 
 ### Paranoid classes
 
