@@ -59,4 +59,5 @@ The functions named `is_valid` checks an object against a specification (e.g., a
 ```python
 def run_paranoia_checks(self):
     assert self.is_valid(self.value), "Meaningful message"
+    return True
 ```
