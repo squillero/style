@@ -32,15 +32,15 @@
 
 * Start names private or protected within a class with a single underscore (`_`); don't dunder (`__`).
 
-* Name properties as variables; methods as functions (`foo.factors = bar.factorize(baz.formula)`).
+* Use nouns for properties, full sentences for methods (`foo.factors = bar.factorize(baz.formula)`).
 
-* Do not implement getters and setters, use properties instead. Whether a function does not need parameters consider using a property (`foo.first_bar` instead of `foo.calculate_first_bar()`). However, do not hide complexity: if a task is computationally intensive, use an explicit method (`big_number.get_prime_factors()`). 
+* Do not implement getters and setters, use properties instead. Whether a function does not need parameters consider using a property (`foo.first_bar` instead of `foo.calculate_first_bar()`). However, do not hide complexity: if a task is computationally intensive, use an explicit method (`number.get_prime_factors()`). 
 
 * Do not override `__repr__`.
 
 * Explicitly derive container classes from `collections.abc`.
 
-* Override `__getstate__` and `__setstate__` if you define `__slots__`; write these functions in the very beginning of the class, before `__init__`. Define `__slots__` only if you are really confident about it.
+* Remember to override `__getstate__` and `__setstate__` if you define `__slots__`; write these functions in the very beginning of the class, before `__init__`. Define `__slots__` only if you are really confident about it.
 
 ### Comments
 
