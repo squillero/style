@@ -10,7 +10,7 @@
 
 ### General
 
-* Follow this order for the sections inside source files: **<system includes>**, **"custom includes"**, **structs**, **typedefs**, **prototypes**, **GlobalVariables**, **functions**. Always use prototypes, functions order inside the file should be irrelevant.
+* Follow this order for the sections inside source files: **< system includes >**, **"custom includes"**, **structs**, **typedefs**, **prototypes**, **GlobalVariables**, **functions**. Always use prototypes, functions order inside the file should be irrelevant.
 * Don't double underscore (`__`), don't shadows symbols from the standard libraries (`int printf = 23`). Don't rename the arguments of `main` (`argc` and `argv`).
 * Use nouns for variables, full sentences for functions (`factors = factorize(formula)`); predicates (i.e., functions returning a boolean value) should start with the `is_` prefix (`if is_gargled(quz):`).
 * Use very short names for variables with short life span; declare them in the smallest possible scope. Use long comprehensible names for local variables that are meaningful in different part of the code; declare them in the beginning of the function; initialize such variables in a line close to their actual usage, to ease cut n'paste.
