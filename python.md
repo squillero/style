@@ -15,7 +15,9 @@
 
 * Prefer an f-string (a.k.a. formatted string literal) over an explicit formatting operation or the string interpolation operator (`f"v={foo}"` instead of `"v={}".format(foo)` or `"v=%s" % (foo,)`). Use single quotes for string constants such as function parameters and dictionary keys (`'utf-8'` or `data['foo']`); use double quotes for messages to the user (`logging.warning(f"data: {data['bar']}")`).
 
-* Start names internal to a module with a single underscore (`_`).
+* Start names internal to a module with a single underscore (`_foo`). Don't start names with double underscore (`__foo`); don't dunder (`__foo__`).
+
+* End names with a single underscore only to avoid conflict with reserved keywords (`list_`).
 
 * Define `__all__` when a file is a collection of functions.
 
@@ -31,11 +33,11 @@
 
 ### Classes
 
-* Start names private or protected within a class with a single underscore (`_`); don't dunder (`__`).
+* Start names private or protected within a class with a single underscore (`_foo`); avoid name mangling if possible (`__foo`).
 
 * Use nouns for properties, full sentences for methods (`foo.factors = bar.factorize(baz.formula)`).
 
-* Do not implement getters and setters, use properties instead. Whether a function does not need parameters consider using a property (`foo.first_bar` instead of `foo.calculate_first_bar()`). However, do not hide complexity: if a task is computationally intensive, use an explicit method (`number.get_prime_factors()`). 
+* Do not implement getters and setters, use properties instead. Whether a function does not need parameters consider using a property (`foo.first_bar` instead of `foo.calculate_first_bar()`). Try not to hide complexity: if a task is computationally intensive, using a method might be wiser (`number.get_prime_factors()`). 
 
 * Do not override `__repr__`.
 
