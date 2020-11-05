@@ -20,7 +20,7 @@
 
 * Define `__all__` when a file is a collection of functions.
 
-* Use `assert` to check the internal consistency and verify the correct usage of methods, not to check for the occurrence of unexpected events. That is: The optimized bytecode should not waste time verifying the correct invocation of methods or running sanity checks.
+* Use `assert` to check the internal consistency and verify the correct usage of methods, not to check for the occurrence of unexpected events. That is, the optimized bytecode should not waste time verifying the correct invocation of methods or running sanity checks.
 
 * Complex compound statements (i.e., multiple statements on the same line) should be avoided. However, a second statement on the same line of a simple `if` can sometimes improve readability (`if value is None: return True`).
 
@@ -42,6 +42,8 @@
 
 * Explicitly derive container classes from `collections.abc`.
 
+* Take advantage of the `abc` infrastructure when defining abstract classes (e.g., inherit from the helper class `ABC`; use the decorators `@abstractmethod` and `@abstractclassmethod`).
+
 * Remember to override `__getstate__` and `__setstate__` if you define `__slots__`; write these functions in the very beginning of the class, before `__init__`. Define `__slots__` only if you are really confident about it.
 
 ### Comments
@@ -62,8 +64,9 @@
 
 ```python
 class Paranoid(ABC):
+    @abstractmethod
     def run_paranoia_checks(self) -> bool:
-        raise NotImplementedError
+        pass
 ```
 
 The functions named `run_paranoia_checks` perform sanity checks. They always return `True`, but stop the execution throwing an exception as soon as an inconsistency is detected. The functions are not supposed to be called in production environments (i.e., when `-O` is used). Hint: it is safe to use `assert some_object.run_paranoia_checks()`. 
@@ -74,8 +77,9 @@ The functions named `run_paranoia_checks` perform sanity checks. They always ret
 
 ```python
 class Pedantic(ABC):
+    @abstractmethod
     def is_valid(self, obj: Any) -> bool:
-        raise NotImplementedError
+        pass
 ```
 
 The functions named `is_valid` checks an object against a specification (e.g., an object against its semantic, an element inside a collection). They return either `True` or `False`. Hint: sometimes it could be useful to inlude them into `run_paranoia_checks`:
