@@ -81,7 +81,7 @@ Paranoia checks should call the parent's check upon termination, that is, they s
 class Pedantic(ABC):
     @abstractmethod
     def is_valid(self, obj: Any) -> bool:
-        pass
+        raise NotImplementedError("Abstract method not implemented")
 ```
 
 The functions named `is_valid` checks an object against a specification (e.g., an object against its semantic, an element inside a collection). They return either `True` or `False`. Hint: sometimes it could be useful to inlude them into `run_paranoia_checks`:
