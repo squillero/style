@@ -71,7 +71,7 @@ class Paranoid(ABC):
 
 The functions named `run_paranoia_checks` perform sanity checks. They always return `True`, but stop the execution throwing an exception as soon as an inconsistency is detected. The functions are not supposed to be called in production environments (i.e., when `-O` is used). Hint: it is safe to use `assert some_object.run_paranoia_checks()`. 
 
-Paranoia checks should call the parent check's on termination, that is, they should end with `return super().run_paranoia_checks()`.
+Paranoia checks should call the parent's check upon termination, that is, they should end with `return super().run_paranoia_checks()`.
 
 ### Pedantic classes
 
