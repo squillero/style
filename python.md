@@ -63,8 +63,7 @@
 `Paranoid` classes implement `run_paranoia_checks()`.
 
 ```python
-class Paranoid(ABC):
-    @abstractmethod
+class Paranoid():
     def run_paranoia_checks(self) -> bool:
         return True
 ```
@@ -75,7 +74,7 @@ Paranoia checks should call the parent's check upon termination, that is, they s
 
 ### Pedantic classes
 
-`Pedantic`classes implement `is_valid(obj)`.
+`Pedantic` classes implement `is_valid(obj)`.
 
 ```python
 class Pedantic(ABC):
