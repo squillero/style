@@ -50,9 +50,9 @@
 
 * Use English for names, in docstrings and in comments. Favor formal language over slang, wit over humor, and American English over British.
 
-* Explain the purpose of all functions and classes in docstrings; be verbose when needed, otherwise use single-line descriptions (note: each verbose description also includes a concise one as its first line). Be descriptive (e.g., `"""Calculates the next Mersenne prime."""`) rather than imperative (`"""Calculate the next Mersenne prime."""`). Function's docstring should give enough information to write a call.
+* Explain the purpose of all functions and classes in docstrings, docstring should give enough information to write the calls and use the classes; be verbose when needed, otherwise use single-line descriptions (note: each verbose description also includes a concise one as its first line).
 
-* Be terse describing class methods, but verbose in the class docstring, possibly including usage examples. Comment public attributes and properties in the `Attributes` section of the class docstring (even though PyCharm is not supporting it, yet). Comment `__init__` only when its parameters are not obvious.
+* Be terse describing class methods, but verbose in the class docstring, possibly including usage examples. Be descriptive (e.g., `"""Calculates the next Mersenne prime."""`) rather than imperative. Comment public attributes and properties in the `Attributes` section of the class docstring (even though PyCharm is not supporting it, yet). Comment `__init__` only when its parameters are not obvious. 
 
 * Do not explain basic class customizations (e.g., `__str__`).  Use the formats suggested in the [Google's style guide](https://google.github.io/styleguide/pyguide.html&#35;383-functions-and-methods).
 
