@@ -16,7 +16,7 @@
 
 * Start names internal to a module with a single underscore (`_foo`). Don't start names with double underscore (`__foo`); don't dunder (`__foo__`).
 
-* End names with a single underscore only to avoid conflict with reserved keywords (`list_`).
+* End names with a single underscore only to avoid conflicts (`list_`).
 
 * Define `__all__` when a file is a collection of functions.
 
@@ -42,7 +42,7 @@
 
 * Explicitly derive container classes from `collections.abc`.
 
-* Take advantage of the `abc` infrastructure when defining abstract classes (e.g., inherit from the helper class `ABC`; use the decorators `@abstractmethod` and `@abstractclassmethod`).
+* Take advantage of the `abc` infrastructure when defining abstract classes (i.e., inherit from the helper class `ABC`; use the decorators `@abstractmethod` and `@abstractclassmethod`).
 
 * Remember to override `__getstate__` and `__setstate__` if you define `__slots__`; write these functions in the very beginning of the class, before `__init__`. Define `__slots__` only if you are really confident about it.
 
@@ -52,9 +52,9 @@
 
 * Explain the purpose of all functions and classes in docstrings, docstring should give enough information to write the calls and use the classes; be verbose when needed, otherwise use single-line descriptions (note: each verbose description also includes a concise one as its first line).
 
-* Be terse describing class methods, but verbose in the class docstring, possibly including usage examples. Be descriptive (e.g., `"""Calculates the next Mersenne prime."""`) rather than imperative. Comment public attributes and properties in the `Attributes` section of the class docstring (even though PyCharm is not supporting it, yet). Comment `__init__` only when its parameters are not obvious. 
+* Be terse describing class methods, but verbose in the class docstring, possibly including usage examples. Be descriptive (`"""Calculates the next Mersenne prime."""`) rather than imperative. Comment public attributes and properties in the `Attributes` section of the class docstring (even though PyCharm is not supporting it, yet). Comment `__init__` only when its parameters are not obvious. 
 
-* Do not explain basic class customizations (e.g., `__str__`).  Use the formats suggested in the [Google's style guide](https://google.github.io/styleguide/pyguide.html&#35;383-functions-and-methods).
+* Do not explain basic class customizations (`__str__`, ...).  Use the formats suggested in the [Google's style guide](https://google.github.io/styleguide/pyguide.html&#35;383-functions-and-methods).
 
 ## Conventions
 
