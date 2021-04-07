@@ -6,7 +6,7 @@
 
 ### Names (TL;DR)
 
-* `function_name`, `_static_function_name`, `MACRO_NAME`, `StructName`, `new_type_t`, `_STRUCT_TYPE_NAME`, `STRUCT_TYPE_NAME`, `GlobalVarName`, `_StaticGlobalVarName`, `local_var_name`, `t`, `function_param_name`.
+* `function_name`, `_static_function_name`, `MACRO_NAME`, `StructName`, `new_type_t`, `NEW_TYPE_ALT`, `GlobalVarName`, `_StaticGlobalVarName`, `local_var_name`, `t`, `function_param_name`.
 
 ### General
 
