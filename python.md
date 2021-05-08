@@ -24,7 +24,7 @@
 
 * Complex compound statements (i.e., multiple statements on the same line) should be avoided. However, a second statement on the same line of a simple `if` can sometimes improve readability (`if value is None: return True`).
 
-* Annotate all functions (refer to [PEP-483](https://www.python.org/dev/peps/pep-0483/) and [PEP-484](https://www.python.org/dev/peps/pep-0484/) for details).
+* Annotate all functions. Read the documentation of the module [`typing`](https://docs.python.org/3/library/typing.html#module-typing) for details; check [PEP-484](https://www.python.org/dev/peps/pep-0484/) and [PEP-526](https://www.python.org/dev/peps/pep-0526/) for additional information.
 
 * Format source code using [Yapf](https://github.com/google/yapf)'s style `"{based_on_style: google, column_limit=120, blank_line_before_module_docstring=true}"`
 
