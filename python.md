@@ -26,8 +26,8 @@
 
 * Annotate all functions. Read the documentation of the module [`typing`](https://docs.python.org/3/library/typing.html#module-typing) for details; check [PEP-484](https://www.python.org/dev/peps/pep-0484/) and [PEP-526](https://www.python.org/dev/peps/pep-0526/) for additional information.
 
-* Format source code using [Yapf](https://github.com/google/yapf)'s style `"{based_on_style: google, column_limit=120, blank_line_before_module_docstring=true}"` or add the style file [.style.yapf](./.style.yapf) in the root of your project and then run `yapf --verbose --recursive --in-place --parallel .`
-from that directory.
+* Format source code using [Yapf](https://github.com/google/yapf)'s style `"{based_on_style: google, column_limit=120, blank_line_before_module_docstring=true}"` (add the style file [.style.yapf](./.style.yapf) in the root of your project and then run `yapf --verbose --recursive --in-place --parallel .`
+from that directory).
 
 * Follow [PEP-440](https://www.python.org/dev/peps/pep-0440/) for version identification.
 
