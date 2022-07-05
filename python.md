@@ -26,8 +26,7 @@
 
 * Annotate all functions. Read the documentation of the module [`typing`](https://docs.python.org/3/library/typing.html#module-typing) for details; check [PEP-484](https://www.python.org/dev/peps/pep-0484/) and [PEP-526](https://www.python.org/dev/peps/pep-0526/) for additional information.
 
-* Format source code using [Yapf](https://github.com/google/yapf)'s style `"{based_on_style: google, column_limit=120, blank_line_before_module_docstring=true}"` (add the style file [.style.yapf](./.style.yapf) in the root of your project and then run `yapf --verbose --recursive --in-place --parallel .`
-from that directory).
+* Format source code using [Yapf](https://github.com/google/yapf)'s style `"{based_on_style: google, column_limit=120, blank_line_before_module_docstring=true}"` (add the style file [pyproject.toml](./conf/pyproject.toml) or the file [.style.yapf](./conf/.style.yapf) in the root of your project, and then run `yapf --verbose --recursive --in-place --parallel .`).
 
 * Follow [PEP-440](https://www.python.org/dev/peps/pep-0440/) for version identification.
 
@@ -37,7 +36,7 @@ from that directory).
 
 * Use nouns for properties, full sentences for methods (`foo.factors = bar.factorize(baz.formula)`).
 
-* Do not implement getters and setters, use properties instead. Whether a function does not need parameters consider using a property (`foo.first_bar` instead of `foo.calculate_first_bar()`). Try not to hide complexity: if a task is computationally intensive, using a method might be wiser (`number.get_prime_factors()`). 
+* Do not implement getters and setters, use properties instead. Whether a function does not need parameters consider using a property (`foo.first_bar` instead of `foo.calculate_first_bar()`). Try not to hide complexity: if a task is computationally intensive, using a method might be wiser (`number.get_prime_factors()`).
 
 * Do not override `__repr__`.
 
@@ -53,7 +52,7 @@ from that directory).
 
 * Explain the purpose of all functions and classes in docstrings, docstring should give enough information to write the calls and use the classes; be verbose when needed, otherwise use single-line descriptions (note: each verbose description also includes a concise one as its first line).
 
-* Be terse describing class methods, but verbose in the class docstring, possibly including usage examples. Be descriptive (`"""Calculates the next Mersenne prime."""`) rather than imperative. Comment public attributes and properties in the `Attributes` section of the class docstring (even though PyCharm is not supporting it, yet). Comment `__init__` only when its parameters are not obvious. 
+* Be terse describing class methods, but verbose in the class docstring, possibly including usage examples. Be descriptive (`"""Calculates the next Mersenne prime."""`) rather than imperative. Comment public attributes and properties in the `Attributes` section of the class docstring (even though PyCharm is not supporting it, yet). Comment `__init__` only when its parameters are not obvious.
 
 * Do not explain basic class customizations (`__str__`, ...).  Use the formats suggested in the [Google's style guide](https://google.github.io/styleguide/pyguide.html&#35;383-functions-and-methods).
 
@@ -69,7 +68,7 @@ class Paranoid():
         return True
 ```
 
-The functions named `run_paranoia_checks` perform sanity checks. They always return `True`, but stop the execution throwing an exception as soon as an inconsistency is detected. The functions are not supposed to be called in production environments (i.e., when `-O` is used). Hint: it is safe to use `assert some_object.run_paranoia_checks()`. 
+The functions named `run_paranoia_checks` perform sanity checks. They always return `True`, but stop the execution throwing an exception as soon as an inconsistency is detected. The functions are not supposed to be called in production environments (i.e., when `-O` is used). Hint: it is safe to use `assert some_object.run_paranoia_checks()`.
 
 Paranoia checks should call the parent's check upon termination, that is, they should end with `return super().run_paranoia_checks()`.
 
