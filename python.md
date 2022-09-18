@@ -10,7 +10,7 @@
 
 ### General
 
-* Use nouns for variables, full sentences for functions (`factors = factorize(formula)`); predicates (i.e., functions returning a boolean value) should start with the `is_` prefix (`if is_gargled(quz):`).
+* Use nouns for variables, full sentences for functions (`factors = factorize(formula)`); predicates (i.e., functions returning a boolean value) should start with the `is_` or `has_` prefix (`if is_gargled(quz):`).
 
 * Prefer an f-string (a.k.a. formatted string literal) over an explicit formatting operation or the string interpolation operator (`f"v={foo}"` instead of `"v={}".format(foo)` or `"v=%s" % (foo,)`). Use single quotes for string constants such as function parameters and dictionary keys (`'utf-8'` or `data['foo']`); use double quotes for messages to the user (`logging.warning(f"data: {data['bar']}")`).
 
@@ -22,7 +22,7 @@
 
 * Use `assert` to check the internal consistency and verify the correct usage of methods, not to check for the occurrence of unexpected events. That is, the optimized bytecode should not waste time verifying the correct invocation of methods or running sanity checks.
 
-* Complex compound statements (i.e., multiple statements on the same line) should be avoided. However, a second statement on the same line of a simple `if` can sometimes improve readability (`if value is None: return True`).
+* Complex compound statements (i.e., multiple statements on the same line) should be avoided.
 
 * Annotate all functions. Read the documentation of the module [`typing`](https://docs.python.org/3/library/typing.html#module-typing) for details; check [PEP-484](https://www.python.org/dev/peps/pep-0484/) and [PEP-526](https://www.python.org/dev/peps/pep-0526/) for additional information.
 
