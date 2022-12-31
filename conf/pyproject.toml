@@ -2,9 +2,10 @@
 
 [tool.yapf]
 based_on_style = "google"
-column_limit = 120
 blank_line_before_module_docstring = true
+column_limit = 120
 
 [tool.black]
-line-length = 120
+exclude = "(^\\.|^__pycache__)"
 include = '\.ipynb'
+line-length = 120
