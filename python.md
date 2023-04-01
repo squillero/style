@@ -24,7 +24,7 @@
 
 * Complex compound statements (i.e., multiple statements on the same line) should be avoided.
 
-* Annotate all functions. Read the documentation of the module [`typing`](https://docs.python.org/3/library/typing.html#module-typing) for details; check [PEP-484](https://www.python.org/dev/peps/pep-0484/) and [PEP-526](https://www.python.org/dev/peps/pep-0526/) for additional information.
+* Annotate all functions. Use the documentation at [https://typing.readthedocs.io/](https://typing.readthedocs.io/) as reference, also check the documentation of the module [`typing`](https://docs.python.org/3/library/typing.html#module-typing). Consider using [mypy](https://mypy-lang.org/) for linting and type checking.
 
 * Format source code using [Yapf](https://github.com/google/yapf)'s style `"{based_on_style: google, column_limit=120, blank_line_before_module_docstring=true}"` (add the style file [pyproject.toml](./conf/pyproject.toml) or the file [.style.yapf](./conf/.style.yapf) in the root of your project, and then run `yapf --verbose --recursive --in-place --parallel .`).
 
