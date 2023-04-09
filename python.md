@@ -14,7 +14,7 @@
 
 * Prefer an f-string (a.k.a., *formatted string literal*) over an explicit formatting operation or the string interpolation operator (`f"v={foo}"` instead of `"v={}".format(foo)` or `"v=%s" % (foo,)`). Use single quotes for string constants such as function parameters and dictionary keys (`'utf-8'` or `data['foo']`); use double quotes for messages to the user.
 
-* To defer the evaluation: use explicit formatting operation in asserts (`assert foo == bar, "{!r} != {!r}.format(foo, bar)`); use `%-formatting` in logging functions and pass the `%` parameters as arguments (`logging.warning("test: %r != %r", foo, bar)`).
+* To defer the evaluation, use `%-formatting` in logging functions and pass the `%` parameters as arguments (`logging.warning("test: %r != %r", foo, bar)`).
 
 * Start names internal to a module with a single underscore (`_foo`). Don't start names with double underscore (`__foo`); don't dunder (`__foo__`).
 
