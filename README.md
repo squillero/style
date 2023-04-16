@@ -4,5 +4,9 @@
 > #### *To do a dangerous thing with style is what I call art*  
 > #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;— Charles Bukowski (1920-1994)
 
+
+
+
+
 **Copyright**  
 These documents has been placed in the public domain.
