@@ -1,3 +1,2 @@
 **`( ! )`** 2020-2021, Giovanni Squillero <<squillero@polito.it>>  
-Everyone is permitted to copy and distribute verbatim or modified
-copies of these documents. 
+These documents has been placed in the public domain. 
