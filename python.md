@@ -48,7 +48,7 @@
 
 * Remember to override `__getstate__` and `__setstate__` if you define `__slots__`; write these functions in the very beginning of the class, before `__init__`. Define `__slots__` only if you are really confident about it.
 
-### Comments
+### Comments and Docstrings
 
 * Use English for names, in docstrings and in comments. Favor formal language over slang, wit over humor, and American English over British.
 
@@ -56,7 +56,9 @@
 
 * Be terse describing class methods, but verbose in the class docstring, possibly including usage examples. Be descriptive (`"""Calculates the next Mersenne prime."""`) rather than imperative. Comment public attributes and properties in the `Attributes` section of the class docstring (even though PyCharm is not supporting it, yet). Comment `__init__` only when its parameters are not obvious.
 
-* Do not explain basic class customizations (`__str__`, ...).  Use the formats suggested in the [Google's style guide](https://google.github.io/styleguide/pyguide.html&#35;383-functions-and-methods).
+* Do not explain basic class customizations (`__str__`, ...).  
+
+* Use the style suggested in the [NumPy's style guide](https://numpydoc.readthedocs.io/en/latest/format.html).
 
 ## Conventions
 
