@@ -58,7 +58,7 @@
 
 * Do not explain basic class customizations (`__str__`, ...).  
 
-* Use the style suggested in the [NumPy's style guide](https://numpydoc.readthedocs.io/en/latest/format.html).
+* Use the style suggested in the [NumPy's style guide](https://numpydoc.readthedocs.io/en/latest/format.html#docstring-standard).
 
 ## Conventions
 
