@@ -45,8 +45,6 @@
 
 * Do not override `__repr__`.
 
-* Explicitly derive container classes from `collections.abc`.
-
 * Take advantage of the `abc` infrastructure when defining abstract classes (i.e., inherit from the helper class `ABC`; use the decorators `@abstractmethod` and `@abstractclassmethod`).
 
 * Remember to override `__getstate__` and `__setstate__` if you define `__slots__`; write these functions in the very beginning of the class, before `__init__`. Define `__slots__` only if you are really confident about it.
@@ -62,38 +60,3 @@
 * Do not explain basic class customizations (`__str__`, ...).  
 
 * Use the style suggested in the [NumPy's style guide](https://numpydoc.readthedocs.io/en/latest/format.html#docstring-standard).
-
-## Conventions
-
-### Paranoid classes
-
-`Paranoid` classes implement `run_paranoia_checks()`.
-
-```python
-class Paranoid():
-    def run_paranoia_checks(self) -> bool:
-        return True
-```
-
-The functions named `run_paranoia_checks` perform sanity checks. They always return `True`, but stop the execution throwing an exception as soon as an inconsistency is detected. The functions are not supposed to be called in production environments (i.e., when `-O` is used). Hint: it is safe to use `assert some_object.run_paranoia_checks()`.
-
-Paranoia checks should call the parent's check upon termination, that is, they should end with `return super().run_paranoia_checks()`.
-
-### Pedantic classes
-
-`Pedantic` classes implement `is_valid(obj)`.
-
-```python
-class Pedantic(ABC):
-    @abstractmethod
-    def is_valid(self, obj: Any) -> bool:
-        raise NotImplementedError("Abstract method not implemented")
-```
-
-The functions named `is_valid` checks an object against a specification (e.g., an object against its semantic, an element inside a collection). They return either `True` or `False`. Hint: sometimes it could be useful to inlude them into `run_paranoia_checks`:
-
-```python
-def run_paranoia_checks(self):
-    assert self.is_valid(self.value), "Meaningful message"
-    return return super().run_paranoia_checks()
-```
