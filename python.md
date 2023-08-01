@@ -24,6 +24,8 @@
 
 * Use `assert` to check the internal consistency and verify the correct usage of methods, not to check for the occurrence of unexpected events. That is, the optimized bytecode should not waste time verifying the correct invocation of methods or running sanity checks.
 
+* In  and warning messages, first describe the problem (`"TypeError: invalid type %s for %s"`); then, if applicable, add a a colon and show the correct alternative (`": expected subclass of %s"`); finally, when possible, add an em dash and give a hint for solving the issue (`"— did you instantiate the object adding extra '()'?"`).
+
 * Complex compound statements (i.e., multiple statements on the same line) should be avoided.
 
 * Annotate all functions. Use the documentation at [https://typing.readthedocs.io/](https://typing.readthedocs.io/) as reference, also check the documentation of the module [`typing`](https://docs.python.org/3/library/typing.html#module-typing). Consider using [mypy](https://mypy-lang.org/) for linting and type checking.
