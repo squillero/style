@@ -1,10 +1,8 @@
 # GIT
 
-> **Notez Bien**: All these rules are meant to be broken, **BUT** you need a very good reason **AND** you must explain it in a comment.
+> Specifications for adding human- (and machine-) readable meaning to GIT commit messages.
 
 ## TL;DR
-
-Follow guidelines in [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
 The commit message should be structured as follows:
 
@@ -15,6 +13,7 @@ The commit message should be structured as follows:
 
 [optional specification(s)]
 ```
+Follow guidelines in [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
 ### Type
 
@@ -29,6 +28,4 @@ The commit message should be structured as follows:
 * **test**: Adding missing tests or correcting existing tests
 
 Use a bang `!` after type to draw attention, e.g., to breaking change. 
-
-### Specification
 
