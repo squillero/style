@@ -30,9 +30,9 @@
 
 * Annotate all functions. Use the documentation at [https://typing.readthedocs.io/](https://typing.readthedocs.io/) as reference, also check the documentation of the module [`typing`](https://docs.python.org/3/library/typing.html#module-typing). Consider using [mypy](https://mypy-lang.org/) for linting and type checking.
 
-* Format source code either using [Yapf](https://github.com/google/yapf) or [Black](https://black.readthedocs.io/en/stable/), but do not mix them in the same project:
-  * Use Yapf's style `"{based_on_style: google, column_limit=120, blank_line_before_module_docstring=true}"`.
-  * Use Black with `--line-length 120` and `--skip-string-normalization`.
+* Format source code either using [Ruff](https://docs.astral.sh/ruff/formatter/) or [Black](https://black.readthedocs.io/en/stable/), try not to mix them in the same project.
+  * Set a line length up to 120.
+  * Preserve `"` and `'` (see above).
 * Use [pyproject.toml](./conf/pyproject.toml) to define options.
 
 * Follow [PEP-440](https://www.python.org/dev/peps/pep-0440/) for version identification.
