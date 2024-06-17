@@ -1,13 +1,12 @@
-# See: https://github.com/squillero/style/blob/master/python.md
-
-[tool.yapf]
-based_on_style = "google"
-blank_line_before_module_docstring = true
-column_limit = 120
-
 [tool.black]
-target-version = ['py311', 'py312']
-exclude = "(^\\.|^__pycache__|^venv)"
-include = '(\.ipynb$|\.py$)'
-line-length = 120
-skip-string-normalization = true
+    target-version            = ['py311']
+    extend-exclude            = "^venv$"
+    include                   = '(\.ipynb$|\.py$)'
+    line-length               = 120
+    skip-string-normalization = true
+
+[tool.ruff]
+    line-length = 120
+
+[tool.ruff.format]
+    quote-style = "preserve"
