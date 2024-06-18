@@ -6,7 +6,23 @@
     skip-string-normalization = true
 
 [tool.ruff]
-    line-length = 120
+    line-length    = 120
+    extend-include = ["*.ipynb"]
 
-[tool.ruff.format]
-    quote-style = "preserve"
+    [tool.ruff.lint]
+        select = [
+            "A",   # check for python builtins being used as variables or parameters
+            "C4",  # helps writing better list/set/dict comprehensions
+            "C90", # check McCabe complexity
+            "CPY", # check for copyright notices in all python files
+            "I",   # check imports
+            "RUF", # Ruff specific rules
+            "S",   # check for security with Bandit
+            "SIM", # helps simplifying code
+            "TID", # helps writing tidier imports
+            "UP",  # check syntax for newer versions of the language
+        ]
+
+    [tool.ruff.format]
+        quote-style                = "preserve"
+        docstring-code-line-length = 76
