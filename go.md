@@ -38,11 +38,11 @@
 
 Use `gofmt`.
 
- Coding Principles
+## Coding Styles
 
 > [*Clear is better than clever.*](https://go-proverbs.github.io/)
 
-## Error Handling
+### Error Handling
 
 ```go
 if err := doSomething(); err != nil {
