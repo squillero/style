@@ -2,13 +2,11 @@
 
 > **Notez Bien**: All these rules are meant to be broken, **BUT** you need a very good reason **AND** you must explain it in a comment.
 
-## Style
-
-### Names (TL;DR)
+## Identifiers (TL;DR)
 
 - `module_name`, `package_name`, `ClassName`, `method_name`, `ExceptionName`, `function_name`, `GLOBAL_CONSTANT_NAME`, `global_var_name`, `instance_var_name`, `function_parameter_name`, `local_var_name`.
 
-### General
+## General
 
 - Use nouns for variables, full sentences for functions (`factors = factorize(formula)`); predicates (i.e., functions returning a boolean value) should start with the `is_` or `has_` prefix (`if is_gargled(quz):`); factory methods (i.e., functions returning types) are sometimes better described by a noun (`percentage = safe_value(0, 100); val = percentage()`).
 
@@ -37,7 +35,7 @@
 
 - Follow [PEP-440](https://www.python.org/dev/peps/pep-0440/) for version identification.
 
-### Classes
+## Classes
 
 - Start names private or protected within a class with a single underscore (`_foo`); avoid name mangling if possible (`__foo`).
 
@@ -51,7 +49,7 @@
 
 - Remember to override `__getstate__` and `__setstate__` if you define `__slots__`; write these functions in the very beginning of the class, before `__init__`. Define `__slots__` only if you are really confident about it.
 
-### Comments and Docstrings
+## Comments and Docstrings
 
 - Use English for names, in docstrings and in comments. Favor formal language over slang, wit over humor, and American English over British.
 
