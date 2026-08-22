@@ -4,5 +4,6 @@
 #### *To do a dangerous thing with style is what I call art*  
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;— Charles Bukowski (1920-1994)
 
-- Python: see [Python with Style](https://github.com/squillero/programmer-zendo/blob/main/python/style.md) in Programmer Zendo
 - C: see [C with Style](https://github.com/squillero/programmer-zendo/blob/main/c/style.md) in Programmer Zendo
+- Go: see [Python with Style](https://github.com/squillero/programmer-zendo/blob/main/golang/style.md) in Programmer Zendo
+- Python: see [Python with Style](https://github.com/squillero/programmer-zendo/blob/main/python/style.md) in Programmer Zendo
